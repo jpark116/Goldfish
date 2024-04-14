@@ -14,10 +14,9 @@ body{
 /* header container */
 #indexHeader{
 display:flex;
-flex-direction:;
 flex-wrap:wrap;
 width:100vw;
-background-color:purple;
+background-color:none;
 min-height:150px;
 }
 
@@ -41,7 +40,7 @@ margin-top:5px;
     flex-direction:column;
     min-height:50vh;
     max-height:100vh;
-    background-color:blue;
+    justify-content: center;
 }
 
 /* Footer container */
@@ -68,4 +67,41 @@ font-size:30px;
 
 }
 
+/* Header separation from body */
+#line{
+    height:12px;
+    width:100vw;
+    background-color:blue;
+}
 
+/* 1st Container inside the main section */
+.innerSection1{
+    height:70%;
+    width:100%;
+    background:repeating-linear-gradient(to bottom,rgba(178, 190, 181,.5),rgba(129, 133, 137,.4),rgb(112, 128, 144,.7));
+    
+}
+span{
+    display:block;
+    position:absolute;
+    top:50px;
+    right:5px;
+    width:32px;
+    background-color:black;
+    height:5px;
+}
+
+span::before, span::after{
+    content:' ';
+    position:absolute;
+    display:block;
+    top:-11px;
+    right:0px;
+    width:32px;
+    height:5px;
+    background-color:black;
+}
+
+span:after{
+    top:11px;
+}
